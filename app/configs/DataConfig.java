@@ -14,11 +14,11 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import play.Play;
-
 @Configuration
 @EnableTransactionManagement
 public class DataConfig {
-
+	private com.marklogic.client.DatabaseClient db = null;
+	
     @Bean
     public EntityManagerFactory entityManagerFactory() {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
