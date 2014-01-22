@@ -9,10 +9,9 @@ import javax.persistence.criteria.CriteriaQuery;
 
 import models.Bar;
 
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
+//@Service
 @Transactional
 public class BarServiceImpl implements BarService {
 

@@ -1,19 +1,29 @@
 package models;
 
-import play.data.validation.Constraints;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
-@Entity
+//@Entity
+@XmlRootElement
 public class Bar {
 
-    @Id
-    @GeneratedValue
-    public String id;
+	// @Id
+	// @GeneratedValue
+	private String id;
 
-    @Constraints.Required(message = "The name is required")
-    public String name;
+	// @Constraints.Required(message = "The name is required")
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getId() {
+		return id;
+	}
 
 }

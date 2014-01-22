@@ -12,7 +12,7 @@ import configs.DataConfig;
 public class TestDataConfig extends DataConfig {
     
     @Bean
-    @Override
+    //@Override
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.h2.Driver");
